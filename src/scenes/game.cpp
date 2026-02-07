@@ -6,7 +6,7 @@
 Game::Game(sf::RenderWindow& window)
     : window(window)
 {
-    player = std::make_unique<character>(&window);
+    player = std::make_unique<character>(&window, 0, 0);
     objects.push_back(std::move(player));
 }
 
@@ -29,5 +29,7 @@ void Game::update(float dt)
 void Game::render()
 {
     for (auto& obj : objects)
+    {
         obj->render();
+    }
 }

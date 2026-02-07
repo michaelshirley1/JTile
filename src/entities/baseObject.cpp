@@ -1,7 +1,6 @@
 #include "entities/baseObject.h"
 
-baseObject::baseObject(sf::RenderWindow* renderWindow, float xStart, float yStart)
-    : window(renderWindow)
+baseObject::baseObject(float xStart, float yStart)
 {
     x = xStart;
     y = yStart;
@@ -14,7 +13,7 @@ void baseObject::update(float dt)
     sprite.setPosition(x, y);
 }
 
-void baseObject::render()
+void baseObject::render(sf::RenderWindow* renderWindow)
 {
-    window->draw(sprite);
+    renderWindow->draw(sprite);
 }

@@ -16,28 +16,28 @@ void root::run()
         settings
     );
 
+    window = &windowBase;
+    window->setFramerateLimit(60);
+
     gameScene = std::make_unique<Game>(*window);
 
     currentScene = std::move(gameScene);
-
-    window = &windowBase;
-    window->setFramerateLimit(60);
 
     sf::Clock clock;
 
     while (window->isOpen())
     {
         float dt = clock.restart().asSeconds();
-        gameProcess(dt);
+        gameProcess(dt, window);
     }
 }
 
-void root::gameProcess(float dt)
+void root::gameProcess(float dt, sf::RenderWindow* renderWindow)
 {
     baseProcesses();
     inputLoop(dt);
     update(dt);
-    renderLoop();
+    renderLoop(renderWindow);
 }
 
 void root::baseProcesses()
@@ -60,11 +60,11 @@ void root::update(float dt)
     currentScene->update(dt);
 }
 
-void root::renderLoop()
+void root::renderLoop(sf::RenderWindow* renderWindow)
 {
     window->clear();
 
-    currentScene->render();
+    currentScene->render(renderWindow);
 
     window->display();
 }

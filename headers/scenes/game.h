@@ -11,12 +11,9 @@ class Game: public baseGameState
         void baseProcesses();
         void inputLoop(float dt);
         void update(float dt);
-        void render();
+        void render(sf::RenderWindow* renderWindow);
 
     private:
         std::vector<std::unique_ptr<baseObject>> objects;
         std::unique_ptr<character> player;
-
-    protected:
-        sf::RenderWindow& window;
 };

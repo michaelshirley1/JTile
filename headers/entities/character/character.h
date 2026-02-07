@@ -5,8 +5,20 @@
 class character : public baseObject
 {
     public:
-        character(sf::RenderWindow* renderWindow, float xStart, float yStart);
+        character(float xStart, float yStart);
+
         void update(float dt) override;
-        void render() override;
+        void render(sf::RenderWindow* renderWindow) override;
+
         sf::CircleShape shape;
+
+        //attributes
+        int health = 100;
+        boolean isRolling;
+        boolean justHit;
+
+    private:
+        void handleRoll();
+        void handleDamage(int amount);
+
 };

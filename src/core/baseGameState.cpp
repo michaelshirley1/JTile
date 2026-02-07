@@ -13,7 +13,7 @@ void baseGameState::update(float dt)
 {
 }
 
-void baseGameState::render()
+void baseGameState::render(sf::RenderWindow* renderWindow)
 {
 }
 

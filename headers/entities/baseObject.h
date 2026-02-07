@@ -4,11 +4,11 @@
 class baseObject
 {
     public:
-        baseObject(sf::RenderWindow* renderWindow, float x, float y);
+        baseObject(float x, float y);
         virtual ~baseObject() = default;
 
         virtual void update(float dt);
-        virtual void render();
+        virtual void render(sf::RenderWindow* renderWindow);
 
     protected:
         sf::Sprite sprite;
@@ -18,6 +18,4 @@ class baseObject
         float y = 0.f;
         float momentumX = 0.f;
         float momentumY = 0.f;
-
-        sf::RenderWindow* window;
 };

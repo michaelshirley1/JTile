@@ -7,11 +7,11 @@ class root
 {
 	public:
 		void run();
-		void gameProcess(float dt);
+		void gameProcess(float dt, sf::RenderWindow* renderWindow);
 		void baseProcesses();
 		void inputLoop(float dt);
 		void update(float dt);
-		void renderLoop();
+		void renderLoop(sf::RenderWindow* renderWindow);
 
 		enum gameState
 		{
@@ -24,8 +24,6 @@ class root
 		gameState currentState = GAMEPLAY;
 
 	private:
-		void initializeScenes();
-		void changeSceneTo(gameState state);
 		sf::Clock clock;
 
 		std::unique_ptr<baseGameState> currentScene;

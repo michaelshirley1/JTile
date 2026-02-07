@@ -4,12 +4,6 @@
     <ClCompile Include="C:\Users\micha\OneDrive\Documents\GitHub\JTile\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tilemap.cpp">
-      <Filter>Source Files\core\tools</Filter>
-    </ClCompile>
-    <ClCompile Include="particles.cpp">
-      <Filter>Source Files\core\tools</Filter>
-    </ClCompile>
     <ClCompile Include="src\core\baseGameState.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>

@@ -389,7 +389,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\micha\OneDrive\Documents\GitHub\JTile\src\main.cpp" />
-    <ClCompile Include="particles.cpp" />
     <ClCompile Include="src\core\baseGameState.cpp" />
     <ClCompile Include="src\core\root.cpp" />
     <ClCompile Include="src\core\tools\tilemap.cpp" />
@@ -398,7 +397,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="src\scenes\game.cpp" />
     <ClCompile Include="src\scenes\menu.cpp" />
     <ClCompile Include="src\scenes\title.cpp" />
-    <ClCompile Include="tilemap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\core\baseGameState.h" />
