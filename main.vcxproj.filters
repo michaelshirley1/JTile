@@ -26,6 +26,7 @@
       <Filter>Source Files\scenes</Filter>
     </ClCompile>
     <ClCompile Include="src\core\tools\tilemap.cpp" />
+    <ClCompile Include="src\core\tools\spritemapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\micha\OneDrive\Documents\GitHub\JTile\CMakeLists.txt" />

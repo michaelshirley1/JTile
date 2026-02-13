@@ -4,9 +4,8 @@
 #include "entities/character/character.h"
 
 Game::Game(sf::RenderWindow& window)
-    : window(window)
 {
-    player = std::make_unique<character>(&window, 0, 0);
+    player = std::make_unique<character>(0, 0);
     objects.push_back(std::move(player));
 }
 
@@ -26,10 +25,10 @@ void Game::update(float dt)
         obj->update(dt);
 }
 
-void Game::render()
+void Game::render(sf::RenderWindow *renderWindow)
 {
     for (auto& obj : objects)
     {
-        obj->render();
+        obj->render(renderWindow);
     }
 }

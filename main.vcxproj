@@ -391,6 +391,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\micha\OneDrive\Documents\GitHub\JTile\src\main.cpp" />
     <ClCompile Include="src\core\baseGameState.cpp" />
     <ClCompile Include="src\core\root.cpp" />
+    <ClCompile Include="src\core\tools\spritemapper.cpp" />
     <ClCompile Include="src\core\tools\tilemap.cpp" />
     <ClCompile Include="src\entities\baseObject.cpp" />
     <ClCompile Include="src\entities\character\character.cpp" />
